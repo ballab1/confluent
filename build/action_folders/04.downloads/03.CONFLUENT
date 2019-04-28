@@ -1,0 +1,10 @@
+# kafka broker/zookeeper
+
+declare -A CONFLUENT=()
+CONFLUENT['version']=${CONFLUENT_VERSION:?}
+CONFLUENT['dir']="/tmp/confluent-${CONFLUENT['version']}"
+CONFLUENT['file']="/tmp/confluent-community-${CONFLUENT['version']}-${SCALA_DISTRO}.tar.gz"
+CONFLUENT['url']="http://packages.confluent.io/archive/5.2/confluent-community-${CONFLUENT['version']}-${SCALA_DISTRO}.tar.gz"
+CONFLUENT['sha256_2.12-5.2.1']="c5612a324025a84b77b063b5b5698abd36e444e87ca4e01fa4bfbe5aa6396f61"
+CONFLUENT['sha256']="${CONFLUENT['sha256_'${SCALA_DISTRO}-${CONFLUENT['version']}]}"
+CONFLUENT['home']="${CONFLUENT_USER_DIR:-/usr/local/kafka}"

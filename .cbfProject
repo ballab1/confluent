@@ -1,0 +1,3 @@
+[project]
+container_name=confluent_container
+friendly_name=confluent

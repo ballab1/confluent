@@ -1,0 +1,8 @@
+#! /bin/bash
+
+mkdir -p "$KAFKA_USER_DIR"
+mkdir -p "$KAFKA_CONF_DIR"
+mkdir -p "$KAFKA_LOG_DIRS"
+
+tar -xzf "${CONFLUENT['file']}"
+mv "${CONFLUENT['dir']}"/* "$KAFKA_USER_DIR"

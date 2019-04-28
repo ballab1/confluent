@@ -1,0 +1,21 @@
+#!/bin/bash
+#############################################################################
+
+function confluent.UID()
+{
+    local -r user_name="${1:-kafka}"
+    local -r default_uid=${2:-1000}
+
+    lib.lookupId "$user_name" 'passwd' "$default_uid"
+}
+export -f confluent.UID
+
+#############################################################################
+function confluent.GID()
+{
+    local -r group_name="${1:-kafka}"
+    local -r default_gid=${2:-1000}
+
+    lib.lookupId "$group_name" 'group' "$default_gid"
+}
+export -f confluent.GID
