@@ -1,7 +1,6 @@
 version: '3.3'
 
 # repo: https://github/ballab1/kafka.git
-# containerOS: alpine i386-ubuntu
 
 services:
     confluent:
