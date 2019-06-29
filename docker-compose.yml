@@ -51,4 +51,4 @@ services:
             ZOOKEEPER_TICK_TIME: 2000
             ZOOKEEPER_TIMEOUT: 6000
         hostname: confluent
-        image: ${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}/confluent/${CONFLUENT_VERSION:-2.0.0}:${CONTAINER_TAG:-latest}
+        image: ${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}/confluent/${CONFLUENT_VERSION:-5.2.2}:${CONTAINER_TAG:-latest}
