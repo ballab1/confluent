@@ -6,3 +6,5 @@ mv "${CONFLUENT['dir']}"/* "$KAFKA_USER_DIR"
 mkdir -p "$KAFKA_USER_DIR"
 mkdir -p "$KAFKA_CONF_DIR"
 mkdir -p "$KAFKA_LOG_DIRS"
+
+ln -s /usr/local/confluent/etc /etc/confluent
