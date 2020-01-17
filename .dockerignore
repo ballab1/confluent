@@ -5,6 +5,7 @@
 .lfsconfig
 .cbfBlacklist
 .cbfProject
+**/~*
 
 #build files
 docker-compose.*
