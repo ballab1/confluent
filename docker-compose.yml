@@ -32,23 +32,5 @@ services:
         container_name: confluent
         environment:
             DEBUG_TRACE: ${DEBUG_TRACE:-0}
-            JMX_PORT: 7203
-            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://10.1.3.6:9092
-            KAFKA_ADVERTISED_HOST_NAME: 10.1.3.6
-            KAFKA_BROKER_ID: 3
-            KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-            KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-            KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-            KAFKA_PORT: 9092
-            KAFKA_NUM_PARTITIONS: 1
-            KAFKA_UID: 1000
-            KAFKA_ZOOKEEPER_CONNECT: ubuntu-s1:2181,ubuntu-s3:2181,ubuntu-s4:2181
-            ZOOKEEPER_HOST: zookeeper
-            ZOOKEEPER_INIT_LIMIT: 10
-            ZOOKEEPER_MY_ID: 3
-            ZOOKEEPER_PORT: 2181
-            ZOOKEEPER_SYNC_LIMIT: 5
-            ZOOKEEPER_TICK_TIME: 2000
-            ZOOKEEPER_TIMEOUT: 6000
         hostname: confluent
         image: ${DOCKER_REGISTRY:-ubuntu-s2.home:5000/}${CONTAINER_OS:-alpine}/confluent/${CONFLUENT_VERSION:-5.4.0}:${CONTAINER_TAG:-latest}

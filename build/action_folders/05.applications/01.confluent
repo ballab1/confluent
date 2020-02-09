@@ -7,4 +7,4 @@ mkdir -p "$KAFKA_USER_DIR"
 mkdir -p "$KAFKA_CONF_DIR"
 mkdir -p "$KAFKA_LOG_DIRS"
 
-ln -s /usr/local/confluent/etc /etc/confluent
+ln -s "$KAFKA_CONF_DIR" /etc/confluent
