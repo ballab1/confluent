@@ -1,4 +1,4 @@
-# kafka broker/zookeeper
+# confluent: kafka broker/zookeeper
 
 declare -A CONFLUENT=()
 CONFLUENT['version']=${CONFLUENT_VERSION:?}
