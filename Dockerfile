@@ -22,7 +22,7 @@ ARG KAFKA_USER_DIR=/usr/local/confluent
 # confluent version being bundled in this docker image
 ARG SCALA_DISTRO=2.12
 LABEL kafka.scala.distro=$SCALA_DISTRO 
-ARG CONFLUENT_VERSION=7.4.0
+ARG CONFLUENT_VERSION=7.4.1
 LABEL version.confluent=$CONFLUENT_VERSION
 
 
