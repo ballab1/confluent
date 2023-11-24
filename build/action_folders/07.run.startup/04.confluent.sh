@@ -40,7 +40,6 @@ function my.updateConfigFromENV()
 }
 #----------------------------------------------------------------------------------------------
 
-
 declare -a zookeeper_keywords=( 'autopurge.purgeInterval'     'autopurge.snapRetainCount'   'clientPort'
                                 'clientPortAddress'           'cnxTimeout'                  'dataDir'
                                 'dataLogDir'                  'electionAlg'                 'forceSync'

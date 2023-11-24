@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd "$KAFKA_USER_DIR"
 chmod -R a+rx "$KAFKA_USER_DIR/bin"
 
