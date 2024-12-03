@@ -7,7 +7,7 @@ services:
             args:
                 CBF_VERSION: ${CBF_VERSION:-}
                 CONTAINER_NAME: confluent
-                FROM_BASE: ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}${CONTAINER_OS:-alpine}/openjdk/${JAVA_VERSION:-17.0.9_p8-r0}:${BASE_TAG:-latest}
+                FROM_BASE: ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}${CONTAINER_OS:-alpine}/openjdk/${JAVA_VERSION:-21.0.5_p11-r0}:${BASE_TAG:-latest}
                 CONFLUENT_VERSION: ${CONFLUENT_VERSION:-7.5.2}
                 KAFKA_USER_DIR: /usr/local/confluent
                 KAFKA_USER_NAME: kafka
@@ -15,7 +15,7 @@ services:
             cache_from:
                 - ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}docker.io/${CONTAINER_OS:-alpine}:${OS_VERSION:-3.20.3}
                 - ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}${CONTAINER_OS:-alpine}/base_container:${BASE_TAG:-latest}
-                - ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}${CONTAINER_OS:-alpine}/openjdk/${JAVA_VERSION:-17.0.9_p8-r0}:${BASE_TAG:-latest}
+                - ${DOCKER_REGISTRY:-s2.ubuntu.home:5000/}${CONTAINER_OS:-alpine}/openjdk/${JAVA_VERSION:-21.0.5_p11-r0}:${BASE_TAG:-latest}
             context: .
             dockerfile: Dockerfile
             labels:
