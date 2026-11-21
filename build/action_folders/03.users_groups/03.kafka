@@ -2,8 +2,8 @@
 
 declare -A kafka=(
     ['user']=${KAFKA_USER_NAME:-kafka}
-    ['uid']=${KAFKA_UID:-$(confluent.UID "${KAFKA_USER_NAME:-}")}
+    ['uid']=${KAFKA_UID:-$(confluent::UID "${KAFKA_USER_NAME:-}")}
     ['group']=${KAFKA_GROUP:-kafka}
-    ['gid']=${KAFKA_GID:-$(confluent.GID "${KAFKA_GROUP:-}")}
+    ['gid']=${KAFKA_GID:-$(confluent::GID "${KAFKA_GROUP:-}")}
     ['home']="${KAFKA_USER_DIR:-/usr/local/confluent}"
 )

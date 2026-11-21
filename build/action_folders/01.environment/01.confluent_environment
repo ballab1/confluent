@@ -7,9 +7,9 @@ declare -ar env_confluent=(
     "SCALA_DISTRO=${SCALA_DISTRO:?}"
 
     'KAFKA_GROUP=${KAFKA_GROUP:-kafka}'
-    'KAFKA_GID=${KAFKA_GID:-$(confluent.GID "$KAFKA_GROUP")}'
+    'KAFKA_GID=${KAFKA_GID:-$(confluent::GID "$KAFKA_GROUP")}'
     'KAFKA_USER_NAME=${KAFKA_USER_NAME:-kafka}'
-    'KAFKA_UID=${KAFKA_UID:-$(confluent.UID "$KAFKA_USER_NAME")}'
+    'KAFKA_UID=${KAFKA_UID:-$(confluent::UID "$KAFKA_USER_NAME")}'
 
 
     'KAFKA_USER_DIR="${KAFKA_USER_DIR:-/usr/local/confluent}"'
@@ -36,8 +36,8 @@ declare -ar env_confluent=(
 )
 
 #remove WORKDIR so it comes after KAFKA_USER_DIR
-crf.removeFromRuntimeEnvironment 'WORKDIR'  
-crf.removeFromRuntimeEnvironment 'USER'  
-crf.updateRuntimeEnvironment "${env_confluent[@]}" 
+crf::removeFromRuntimeEnvironment 'WORKDIR'
+crf::removeFromRuntimeEnvironment 'USER'
+crf::updateRuntimeEnvironment "${env_confluent[@]}"
 
 

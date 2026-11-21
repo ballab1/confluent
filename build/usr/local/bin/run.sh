@@ -9,7 +9,7 @@ case "$1" in
     zookeeper)
         ;;
     *)
-        term.log 'Invalid option passed to startup\n'
+        term::log 'Invalid option passed to startup\n'
         exit 1
         ;;
 esac
